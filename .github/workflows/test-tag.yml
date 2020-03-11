@@ -11,8 +11,8 @@ name: CI
 # events but only for the master branch
 on:
   release:
-    types: # This configuration does not affect the page_build event above
-      - created
+    # Only use the types keyword to narrow down the activity types that will trigger your workflow.
+    types: [published, created, edited]
             
   
 #   push:
