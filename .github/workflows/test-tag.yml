@@ -37,5 +37,5 @@ jobs:
       run: |
         echo Hello, world!
         echo ${{ github.event_name }}
-        echo ${{ github }} | jq .
+        echo ${{ github }} | jq '.'
         
