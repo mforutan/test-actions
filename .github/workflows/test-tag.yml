@@ -37,6 +37,9 @@ jobs:
       run: |
         echo Hello, world!
         echo ${{ github.event_name }}
-        echo ${{ github.event }}
-        echo ${{ github }} | jq '.event'
+        echo ${{ github.event[0].tag_name }}
+        echo ${{ github.event[0].tarball_url }}
+        echo ${{ github.event[0].created_at }}
+        echo ${{ github.event[0].published_at }}
+
         
