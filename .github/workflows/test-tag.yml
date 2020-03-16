@@ -43,5 +43,9 @@ jobs:
         echo ${{ github.event.created_at }}
         echo ${{ github.event.published_at }}
         echo ${{ github.event.client_payload.github.payload.repository.full_name }}
+        echo ${{ github.event.comment.created_at }}
+        echo ${{ github.event.release.created_at }}
+        echo ${{ github.event.release.published_at }}
+        echo ${{ github.event.release.tarball_url }}
 
         
