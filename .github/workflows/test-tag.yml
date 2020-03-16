@@ -46,6 +46,8 @@ jobs:
         echo ${{ github.event.comment.created_at }}
         echo ${{ github.event.release.created_at }}
         echo ${{ github.event.release.published_at }}
-        echo ${{ github.event.release.tarball_url }}
+        echo ${{ github.event.release.url }}
+        echo ${{ github.event.release.target_commitish }}
+        
 
         
