@@ -37,6 +37,7 @@ jobs:
       run: |
         echo Hello, world!
         echo ${{ github.event_name }}
+        echo ${{ github }}
         echo ${{ github.event.tag_name }}
         echo ${{ github.event.name }}
         echo ${{ github.event.target_commitish }}
