@@ -1,0 +1,15 @@
+name: Release via file changes
+
+on:
+  push:
+    paths:
+      - latest-release.md
+      - '!**'
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
