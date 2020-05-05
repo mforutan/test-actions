@@ -4,8 +4,6 @@ on:
   pull_request:
     paths:
       - latest-release.md
-    branches:
-      - '!master'
 
 jobs:
   build:
