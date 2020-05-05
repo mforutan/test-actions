@@ -1,0 +1,25 @@
+name: Release via file changes
+
+on:
+  pull_request:
+    paths:
+      - latest-release.md
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0    
+    - name: Check changes
+      id: check-changes
+      uses: rdietrick/did-files-change@v1.2
+      with:
+        pathspec: latest-release.md
+
+    - name: Debug
+      run: |
+        echo "Changes detected in test directory: ${{ steps.check-changes.outputs.changed }}"        
