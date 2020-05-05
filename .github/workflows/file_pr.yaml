@@ -1,12 +1,11 @@
 name: Release via file changes
 
 on:
-  push:
+  pull_request:
     paths:
       - latest-release.md
-      - '!**'
     branches:
-      - master
+      - '!master'
 
 jobs:
   build:
